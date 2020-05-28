@@ -8,7 +8,8 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Calculator {
+public class Calculator 
+{
 
 	private JFrame frame;
 	private JTextField textField;
@@ -22,13 +23,18 @@ public class Calculator {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
 					Calculator window = new Calculator();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -38,14 +44,16 @@ public class Calculator {
 	/**
 	 * Create the application.
 	 */
-	public Calculator() {
+	public Calculator() 
+	{
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
 		frame = new JFrame();
 		frame.setBounds(100, 100, 255, 422);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,7 +70,8 @@ public class Calculator {
 		//-----------------row 1 ------------------------
 		
 		JButton btnBack = new JButton("B");
-		btnBack.addActionListener(new ActionListener() {
+		btnBack.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				String back=null;
@@ -80,7 +89,8 @@ public class Calculator {
 		frame.getContentPane().add(btnBack);
 		
 		JButton btnC = new JButton("c");
-		btnC.addActionListener(new ActionListener() {
+		btnC.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				textField.setText(null);
@@ -91,7 +101,8 @@ public class Calculator {
 		frame.getContentPane().add(btnC);
 		
 		JButton btnMod = new JButton("%");
-		btnMod.addActionListener(new ActionListener() {
+		btnMod.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				firstnum=Double.parseDouble(textField.getText());
@@ -104,7 +115,8 @@ public class Calculator {
 		frame.getContentPane().add(btnMod);
 		
 		JButton btnPlus = new JButton("+");
-		btnPlus.addActionListener(new ActionListener() {
+		btnPlus.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				firstnum=Double.parseDouble(textField.getText());
@@ -123,7 +135,8 @@ public class Calculator {
 		//-----------------row 2 ------------------------
 		
 		JButton btn7 = new JButton("7");
-		btn7.addActionListener(new ActionListener() {
+		btn7.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				String EnterNumber = textField.getText()+btn7.getText();
@@ -135,7 +148,8 @@ public class Calculator {
 		frame.getContentPane().add(btn7);
 		
 		JButton btn8 = new JButton("8");
-		btn8.addActionListener(new ActionListener() {
+		btn8.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				String EnterNumber = textField.getText()+btn8.getText();
@@ -147,7 +161,8 @@ public class Calculator {
 		frame.getContentPane().add(btn8);
 		
 		JButton btn9 = new JButton("9");
-		btn9.addActionListener(new ActionListener() {
+		btn9.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				String EnterNumber = textField.getText()+btn9.getText();
@@ -159,7 +174,8 @@ public class Calculator {
 		frame.getContentPane().add(btn9);
 		
 		JButton btnSub = new JButton("-");
-		btnSub.addActionListener(new ActionListener() {
+		btnSub.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				firstnum=Double.parseDouble(textField.getText());
@@ -176,7 +192,8 @@ public class Calculator {
 		//-----------------row 3 ------------------------
 		
 				JButton btn4 = new JButton("4");
-				btn4.addActionListener(new ActionListener() {
+				btn4.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn4.getText();
@@ -200,7 +217,8 @@ public class Calculator {
 				frame.getContentPane().add(btn5);
 				
 				JButton btn6 = new JButton("6");
-				btn6.addActionListener(new ActionListener() {
+				btn6.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn6.getText();
@@ -212,7 +230,8 @@ public class Calculator {
 				frame.getContentPane().add(btn6);
 				
 				JButton btnMul = new JButton("*");
-				btnMul.addActionListener(new ActionListener() {
+				btnMul.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						firstnum=Double.parseDouble(textField.getText());
@@ -227,7 +246,8 @@ public class Calculator {
 				//-----------------row 4 ------------------------
 				
 				JButton btn1 = new JButton("1");
-				btn1.addActionListener(new ActionListener() {
+				btn1.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn1.getText();
@@ -239,7 +259,8 @@ public class Calculator {
 				frame.getContentPane().add(btn1);
 				
 				JButton btn2 = new JButton("2");
-				btn2.addActionListener(new ActionListener() {
+				btn2.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn2.getText();
@@ -251,7 +272,8 @@ public class Calculator {
 				frame.getContentPane().add(btn2);
 				
 				JButton btn3 = new JButton("3");
-				btn3.addActionListener(new ActionListener() {
+				btn3.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn3.getText();
@@ -263,7 +285,8 @@ public class Calculator {
 				frame.getContentPane().add(btn3);
 				
 				JButton btnDiv = new JButton("/");
-				btnDiv.addActionListener(new ActionListener() {
+				btnDiv.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						firstnum=Double.parseDouble(textField.getText());
@@ -278,7 +301,8 @@ public class Calculator {
 //-----------------row 5 ------------------------
 				
 				JButton btn0 = new JButton("0");
-				btn0.addActionListener(new ActionListener() {
+				btn0.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String EnterNumber = textField.getText()+btn0.getText();
@@ -295,7 +319,8 @@ public class Calculator {
 				frame.getContentPane().add(btnDot);
 				
 				JButton btnPM = new JButton("+-");
-				btnPM.addActionListener(new ActionListener() {
+				btnPM.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						Double ops = Double.parseDouble(String.valueOf(textField.getText()));
@@ -309,7 +334,8 @@ public class Calculator {
 				frame.getContentPane().add(btnPM);
 				
 				JButton btnEqual = new JButton("=");
-				btnEqual.addActionListener(new ActionListener() {
+				btnEqual.addActionListener(new ActionListener() 
+				{
 					public void actionPerformed(ActionEvent e) 
 					{
 						String answer;
